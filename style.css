@@ -1,0 +1,548 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Montserrat';
+    /* font-family: 'The Bold Font', sans-serif; */
+
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.nav {
+    /* background-color: blue; */
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 150px;
+    gap: 45px;
+    position: fixed;
+    z-index: 99;
+}
+
+.nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.nav img {
+    height: 70px;
+}
+
+.cursor {
+    height: 20px;
+    width: 20px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    z-index: 99;
+    position: fixed;
+}
+
+.cursor-blur {
+    height: 500px;
+    width: 500px;
+    background-color: rgba(172, 255, 47, 0.188);
+    border-radius: 50%;
+    z-index: 9;
+    position: fixed;
+    filter: blur(40px);
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.333);
+
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    /* background-color: blue; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1 {
+    font-size: 140px;
+    font-weight: bolder;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#page1 h1::before {
+    content: 'Eat. Drink. Play.';
+    position: absolute;
+    color: black;
+    top: -5px;
+    left: -5px;
+    -webkit-text-stroke: 1px greenyellow;
+    z-index: -1;
+}
+
+#page1 h3 {
+    font-size: 35px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#page1 h5 {
+    font-size: 17px;
+    font-weight: 40%;
+    width: 40%;
+}
+
+.arrow {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid greenyellow;
+    position: absolute;
+    left: -2%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: all ease 0.5;
+}
+
+.arrow i {
+    font-size: 50px;
+    /* font-weight: 900; */
+
+}
+
+
+#page2 {
+    height: 150vh;
+    width: 100%;
+    /* background-color: #000 */
+    z-index: 10;
+}
+
+.arrow:hover {
+    scale: 0.5;
+    background-color: greenyellow;
+
+}
+
+#scroller {
+    background-color: transparent;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    scrollbar-width: none;
+    margin-bottom: 80px;
+}
+
+#scrollin {
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#scroller h4 {
+    display: inline-block;
+    color: black;
+    font-size: 120px;
+    font-weight: 900;
+    margin-right: 15px;
+    transition: all linear 0.5s;
+    -webkit-text-stroke: 1px white;
+
+}
+
+#scroller h4:hover {
+    color: greenyellow;
+
+}
+
+.page3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.page3 img {
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.page3text {
+    width: 45%;
+
+}
+
+.page3text p {
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.page3text h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.cards {
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+
+}
+
+.card {
+    height: 80%;
+    width: 25%;
+    border-radius: 20px;
+    /* background-color: azure; */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+#card1 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card2 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card3 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: greenyellow;
+    padding: 30px;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4 {
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.overlay p {
+    color: black;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: rotate3d(1, 1, 0, 15deg);
+}
+
+.signuptab {
+    height: 30vh;
+    width: 100%;
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, rgba(172, 255, 47, 0.945), green);
+    z-index: 99;
+    /* opacity: 0.8; */
+}
+
+.signuptab img {
+    height: 100%;
+    object-fit: cover;
+    width: 15%;
+    /* background-color: greenyellow; */
+
+}
+
+.signuptab p {
+    color: black;
+    font-size: 27px;
+    width: 50%;
+    text-align: center;
+    font-weight: 800;
+    line-height: 40px;
+}
+
+.signupimage {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.333);
+}
+
+.sign-text {
+    width: 37%;
+}
+
+.sign-text button {
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    margin-top: 20px;
+    border: 2px solid greenyellow;
+    text-transform: uppercase;
+}
+
+.sign-text button:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+
+
+.signupimage img {
+    height: 500px;
+    width: 700px;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, transparent, greenyellow);
+    z-index: 99;
+}
+
+.sign-text h1 {
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.sign-text p {
+    font-size: 17px;
+    /* font-weight: 500; */
+    line-height: 27px;
+}
+
+.third {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* flex-direction: column; */
+    background-color: rgba(0, 0, 0, 0.333);
+}
+
+.third img {
+    position: absolute;
+    height: 60px;
+}
+
+.third>p {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 800;
+    width: 60%;
+    line-height: 40px;
+}
+
+.third #colon1 {
+    left: 15%;
+    top: 25%;
+}
+
+.third #colon2 {
+    right: 15%;
+    bottom: 35%;
+}
+
+.fourth>p {
+    font-size: 80px;
+    text-align: center;
+    font-weight: 800;
+    color: black;
+    -webkit-text-stroke: white 1px;
+    text-transform: uppercase;
+}
+
+.fourth {
+    height: 30vh;
+    width: 100%;
+    /* background-color: rgb(241, 13, 13); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.333);
+}
+
+.hcard {
+    height: 70%;
+    width: 26%;
+    overflow: hidden;
+    background-color: greenyellow;
+    border-radius: 20px;
+    position: relative;
+}
+
+.hcard h2 {
+    height: 100%;
+    width: 100%;
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: black;
+    font-weight: 800;
+    position: absolute;
+    transition: all ease 0.5s;
+    z-index: 10;
+}
+
+.hcard img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hcard:hover h2 {
+    color: white;
+    background-color: transparent;
+}
+
+.hcard:hover img {
+    scale: 1;
+}
+
+.fourth h1 {
+    font-size: 80px;
+    position: absolute;
+    font-weight: 800;
+    top: -15%;
+    color: black;
+    /* font-family: gilroy; */
+    -webkit-text-stroke: 1px white;
+}
+
+.footer {
+    height: 100%;
+    width: 100%;
+    background-color: greenyellow;
+    background: linear-gradient(to left bottom, green, greenyellow);
+    /* position: absolute; */
+
+}
+
+.footer img {
+    height: 100px;
+    overflow: hidden;
+    object-fit: cover;
+    width: 15%;
+
+    /* background-color: greenyellow; */
+}
+
+.footer #dots {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    /* z-index: 99; */
+    /* position: relative; */
+}
+
+/* #logo{
+    height: 20px;
+    position: absolute;
+    z-index: 10;
+} */
+
+.footerinfo {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer h4 {
+    color: black;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.footer p {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.footer h5 {
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.footerbottom {
+    height: 10vh;
+    width: 100%;
+    /* background-color: greenyellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
